@@ -1,0 +1,22 @@
+<script>
+    window.onload = function () {
+        var start = document.getElementById("start");
+        start.onclick = function () {
+            var ID = setInterval(function () {
+                var d = new Date();
+                var res = document.getElementById("res");
+                res.innerHTML = d.toLocaleString();
+            }, 1000);
+            var stop = document.getElementById("stop");
+            stop.onclick = function () {
+                clearInterval(ID)
+            };
+
+        };
+    }
+
+
+</script>
+<div id="res"></div>
+<button id="stop">STOP</button>
+<button id="start">START</button>
